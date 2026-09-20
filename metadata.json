@@ -1,0 +1,8 @@
+{
+  "name": "Remix PU Roof Works Dashboard",
+  "description": "Company operational dashboard for PU Roof Works featuring 3-file Express CSV import (Cash Sales, Invoices/Credit Sales, Deposits), Sales Forecast, Inventory Stock Health, and AR Management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
