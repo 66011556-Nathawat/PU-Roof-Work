@@ -9,8 +9,10 @@
   - Days of cover > 90 days triggers Push List [PASSED]
   - Reorder point formula `(avg_daily * lead_time) + safety_stock` [PASSED]
 - **Deliverables Completed**:
+  - Full Mobile & Touch Experience (Fixed Thumb-Zone Bottom Nav, Slide-Over Navigation Drawer, Touch hitboxes >= 44px, <= 15% Mobile Sticky Cap).
   - Ingestion interface for 3 CSV files (Cash sales, Invoices, Deposits) as shown in preview.webp.
   - Auto-detection of file format.
   - Executive Overview with Month-to-date sales and forecast band.
   - Stock Health and Quote Assistant (Track B).
-  - 6 Markdown documents available for GitHub handover.
+  - CEO Password Gate (1234) & Role-Based Access Control (RBAC).
+  - Bilingual Thai/English UI and 7 GitHub specification documents.

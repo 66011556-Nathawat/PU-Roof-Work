@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PU Roof Works — Launcher & Shortcut</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --sky: #0284c7;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --rose: #ef4444;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 680px;
+      width: 100%;
+      padding: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: rgba(2, 132, 199, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(2, 132, 199, 0.3);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.4);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background-color: #1f2937;
+      color: #ffffff;
+      border-color: #374151;
+    }
+    .btn-secondary:hover {
+      background-color: #374151;
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background-color: transparent;
+      color: #38bdf8;
+      border-color: #1e3a8a;
+    }
+    .btn-ghost:hover {
+      background-color: rgba(2, 132, 199, 0.1);
+    }
+    .info-box {
+      background-color: #0b1329;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .info-box code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+    .footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--emerald);
+      margin-right: 6px;
+      box-shadow: 0 0 8px var(--emerald);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">PU ROOF WORKS LAUNCHER</div>
+    <h1>หลังคาเหล็กและพียูโฟม (PU Roof Works)</h1>
+    <p class="subtitle">
+      ระบบบริหารจัดการและสนับสนุนการตัดสินใจเชิงกลยุทธ์ โรงงานผลิตหลังคาเหล็กเมทัลชีทและบุฉนวนพียูโฟม<br>
+      ดับเบิลคลิกไฟล์นี้เพื่อเปิดใช้งานแอปพลิเคชันได้ทันทีทุกที่ทุกเวลา
+    </p>
+
+    <div class="button-group">
+      <!-- 1. Open Live Web App -->
+      <a href="https://pu-roof-works-dashbaord-nathawat48.ai.studio" class="btn btn-primary" id="launchCloud">
+        <div>
+          <div style="font-size: 15px;">🚀 เปิดใช้งานระบบออนไลน์ (Live Cloud App)</div>
+          <div style="font-size: 11px; font-weight: normal; opacity: 0.85; margin-top: 2px;">
+            เปิดทันที: https://pu-roof-works-dashbaord-nathawat48.ai.studio
+          </div>
+        </div>
+        <span>➔</span>
+      </a>
+
+      <!-- 2. Open Localhost 3000 -->
+      <a href="http://localhost:3000" class="btn btn-secondary" id="launchLocal">
+        <div>
+          <div style="font-size: 14px;">💻 เปิด Local Development (http://localhost:3000)</div>
+          <div style="font-size: 11px; font-weight: normal; opacity: 0.75; margin-top: 2px;">
+            สำหรับเปิดในเครื่องเมื่อรันคำสั่ง <code>npm run dev</code>
+          </div>
+        </div>
+        <span>➔</span>
+      </a>
+
+      <!-- 3. Open Documentation -->
+      <a href="./README-TH.md" class="btn btn-ghost">
+        <div>
+          <div style="font-size: 13px;">📑 เปิดอ่านคู่มือและเอกสารสเปกทั้ง 7 ฉบับ (README-TH.md)</div>
+          <div style="font-size: 11px; font-weight: normal; opacity: 0.75; margin-top: 2px;">
+            ผังสิทธิ์ RBAC, รหัสผ่าน CEO (1234), สเปก PRD และสูตรคำนวณโรงงาน
+          </div>
+        </div>
+        <span>➔</span>
+      </a>
+    </div>
+
+    <div class="info-box">
+      <strong>💡 วิธีรันระบบบนเครื่องคอมพิวเตอร์ของคุณ (Local Machine):</strong><br>
+      1. เปิดโฟลเดอร์นี้ใน Terminal หรือ Command Prompt<br>
+      2. รันคำสั่ง: <code>npm install</code> เพื่อติดตั้งไลบรารี<br>
+      3. รันคำสั่ง: <code>npm run dev</code> แล้วคลิกปุ่ม "เปิด Local Development" ด้านบน<br>
+      4. หรือดับเบิลคลิกไฟล์ <code>START_APP.bat</code> (Windows) / <code>START_APP.command</code> (Mac)
+    </div>
+
+    <div class="footer">
+      <div>
+        <span class="status-dot"></span> ระบบพร้อมใช้งาน (Ready to Launch)
+      </div>
+      <div>
+        CEO Master PIN: <strong>1234</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Optional instant redirection if requested via hash #auto
+    if (window.location.hash === '#auto') {
+      window.location.href = "https://pu-roof-works-dashbaord-nathawat48.ai.studio";
+    }
+  </script>
+</body>
+</html>

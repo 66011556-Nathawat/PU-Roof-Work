@@ -1,6 +1,7 @@
 # PU Roof Works — Metal Sheet & PU Foam Roof Manufacturing Executive Decision Hub
 > **ศูนย์บริหารจัดการและสนับสนุนการตัดสินใจเชิงกลยุทธ์ โรงงานผลิตหลังคาเหล็กเมทัลชีทและบุฉนวนพียูโฟม**  
-> ขับเคลื่อนด้วยข้อมูลจาก 3 ไฟล์ CSV ของโปรแกรมบัญชี Express (ขายเงินสด, ใบกำกับสินค้า/ขายเชื่อ, ใบรับมัดจำ)
+> ขับเคลื่อนด้วยข้อมูลจาก 3 ไฟล์ CSV ของโปรแกรมบัญชี Express (ขายเงินสด, ใบกำกับสินค้า/ขายเชื่อ, ใบรับมัดจำ)  
+> 🌐 **Live Web Application**: [https://pu-roof-works-dashbaord-nathawat48.ai.studio](https://pu-roof-works-dashbaord-nathawat48.ai.studio)
 
 ---
 
@@ -28,9 +29,38 @@
    - `Deposit Receipts (CSV ใบรับมัดจำ)`
 2. **Track A — Executive Run Rate & Forecast**: Computes elapsed working days, sales pace, seasonal weighting, and low/base/high monthly projections against a ฿2.5M target.
 3. **Track B — Inventory & Quote Builder**: Calculates Days of Cover (DoC), Reorder Point (ROP), overstock push list (>90 days), and quotes with profit margin floor/ceiling guardrails.
-4. **Role-Based Access Control (RBAC) & CEO Governance**:
-   - **CEO (คุณชาเอม)**: Protected with PIN **`1234`**, 100% master permissions across all 8 modules, executive override authority for quote margins, and a directive channel to Admin.
+4. **Production & Job Delivery Tracker (Shop Floor & Logistics)**:
+   - 4-stage real-time manufacturing and dispatch pipeline: `รอรีดลอน (Roll Forming)` → `กำลังติด PU (Applying PU Foam)` → `พร้อมจัดส่ง (Ready to Ship)` → `จัดส่งเรียบร้อย (Delivered)`.
+   - Real-time tracking of Job No., customer name, delivery site location, total length (meters), site contractor name, phone number, and scheduled dispatch date.
+   - Operated primarily by the **Warehouse & Logistics Supervisor** with administrative oversight from **Admin** and **CEO**.
+5. **Role-Based Access Control (RBAC) & CEO Governance**:
+   - **CEO (คุณชาเอม)**: Protected with Master PIN **`1234`** (documented in GitHub repository specs), 100% master permissions across all 8 modules, executive override authority for quote margins, and a directive channel to Admin.
    - **Admin, Sales, Warehouse, Accounting**: Strict separation of duties — each department can only access and perform their authorized tasks.
+
+---
+
+## 2. Production Delivery: How It Works (ระบบงานผลิตและจัดส่ง)
+
+The **Job Delivery Tracker** (`Truck / คิวงานผลิตและจัดส่ง`) synchronizes metal sheet roll-forming shop floor operations with daily site dispatch logistics:
+
+### Pipeline Stages
+1. **1. รอรีดลอน (Roll Forming Pending)**:
+   - Raw material inspection: Galvanized and pre-painted steel coil mounted onto the de-coiler machine.
+   - Machine tooling calibrated for ordered profile (e.g. ลอน 760, ลอนสเปน, ลอนฝ้า).
+2. **2. กำลังติด PU (Applying PU Foam / Polyurethane Lamination)**:
+   - In-line chemical foaming unit injects continuous rigid polyurethane foam (1-inch or 2-inch thickness).
+   - Protective aluminium foil or PVC backing laminated under automated heat and density sensors.
+3. **3. พร้อมจัดส่ง (Ready to Ship / Staging & Loading)**:
+   - Sheets sheared to order specifications (e.g., 6.00m, 8.50m, 12.00m).
+   - Bundles tagged with Job Number labels, passed through Quality Control (QC), and loaded onto 6-wheel or 10-wheel transport trucks.
+4. **4. จัดส่งเรียบร้อย (Delivered / Signed Handover)**:
+   - Dispatched to construction site address.
+   - Received and inspected by the contractor/installer, delivery manifest signed, and order status finalized in the system.
+
+### Interactive Features
+- **Pipeline Metric Cards**: Instant count of active trucks/jobs per stage with single-click status filtering.
+- **Stage Progression**: Select dropdown on any job card to instantly update its status.
+- **Site Coordination**: Quick access to destination address, foreman phone call links, and total meters produced.
 
 ---
 
@@ -45,7 +75,20 @@ All 5 core operational formulas have been verified against hand-calculated bench
 
 ---
 
-## 3. Getting Started
+## 3. 1-Click Launchers & Shortcuts (ทางลัดเปิดใช้งานทันที)
+
+You can launch and open the application instantly without using the terminal by double-clicking the launcher files included in the project root:
+
+| File | Operating System | Action |
+| :--- | :--- | :--- |
+| **`OPEN_APP.html`** | Windows, Mac, Linux, Tablet | Universal launcher portal; opens in any web browser with 1-click cloud & localhost options |
+| **`OPEN_APP.url`** | Windows | Internet Shortcut; immediately opens the live web app in your default browser |
+| **`START_APP.bat`** | Windows | Batch script; starts the local Node.js server and launches the browser automatically |
+| **`START_APP.command`** | macOS / Linux | Executable script; starts the local server and opens your default browser |
+
+---
+
+## 4. Getting Started
 
 ### Development Mode
 \`\`\`bash
